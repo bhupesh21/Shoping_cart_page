@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+       <title>Hello, world!</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-10 col-11 mx-auto">
+                <div class="row mt-5 gx-3">
+                    <div class="col-md-12 col-lg-8 col-11 mx-auto main_cart mb-lg-0 mb-5 shadow">
+                        <div class="card p-4 ">
+                            <h2 class="py-4 font-weight-bold">Cart(2items)</h2>
+                            <div class="row">
+                                <!--imges !-->
+                                <div class="col-md-5 col-11 mx-auto bg-light d-flex justify-content-center align-items-center shadow product_img">
+                                    <img src="kurta2.jpg" class="img-fluid">
+                                </div>
+                                <!--card product !-->
+                                <div class="col-md-7 col-11 mx-auto px-4 mt-2">
+                                    <div class="row">
+                                    <div class="col-6 card-title">
+                                        <h1 class="mb-4 product_name">kurta</h1>
+                                        <p class="mb-2">Kurta-Brown</p>
+                                        <p class="mb-2">Coor-Brown</p>
+                                        <p class="mb-2">Size-M</p>
+                                    </div>
+                                    <!--quantity increment product !-->
+                                    <div class="col-6">
+                                        <ul class="pagination justify-content-end set_quantity">
+                                            <li class="page-item"><button class="page-link"  onclick="decrease('textbox','iteamval')"><i class="fas fa-minus"></i></button></li>
+                                            <li class="page-item"><input type="text" class="page-link" value="0"style="width: 50px;" id="textbox"></button></li>
+                                            <li class="page-item"><button class="page-link" onclick="increase('textbox','iteamval')"><i class="fas fa-plus"></i></button></li>
+                                          
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!--remove !-->
+                                <div class="row">
+                                    <div class="col-8 d-flex justify-content-between remove_wish">
+                                        <p><i class="fas fa-trash" onclick="delet()"></i>Remove item</p>
+                                        <p><i class="fas fa-heart " id="heart"onclick="heart()"></i>Move To WishList </p>
+                                    </div>
+                                    <div class="col-4 justify-content-end d-flex price_money">
+                                        <h4>$<span id="iteamval">0.00</span></h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <hr/>
+                    
+                    <!--2n cart product start-->
+                    <div class="card p-4 ">
+                        
+                        <div class="row">
+                            <!--imges !-->
+                            <div class="col-md-5 col-11 mx-auto bg-light d-flex justify-content-center align-items-center shadow product_img">
+                                <img src="kurta4.jpg" class="img-fluid">
+                            </div>
+                            <!--card product !-->
+                            <div class="col-md-7 col-11 mx-auto px-4 mt-2">
+                                <div class="row">
+                                <div class="col-6 card-title">
+                                    <h1 class="mb-4 product_name">kurta</h1>
+                                    <p class="mb-2">Kurta-Blue</p>
+                                    <p class="mb-2">Coor-Blue</p>
+                                    <p class="mb-2">Size-M</p>
+                                </div>
+                                <!--quantity increment product !-->
+                                <div class="col-6">
+                                    <ul class="pagination justify-content-end set_quantity">
+                                        <li class="page-item"><button class="page-link"  onclick="decrease('textbox1','iteamval1')"><i class="fas fa-minus"></i></button></li>
+                                        <li class="page-item"><input type="text" class="page-link" value="0"style="width: 50px;" id="textbox1"></button></li>
+                                        <li class="page-item"><button class="page-link" onclick="increase('textbox1','iteamval1')"><i class="fas fa-plus"></i></button></li>
+                                      
+                                    </ul>
+                                </div>
+                            </div>
+                            <!--remove !-->
+                            <div class="row">
+                                <div class="col-8 d-flex justify-content-between remove_wish">
+                                    <p><i class="fas fa-trash" onclick="delet()"></i>Remove item</p>
+                                    <p><i class="fas fa-heart " id="heart"onclick="heart()"></i>Move To WishList </p>
+                                </div>
+                                <div class="col-4 justify-content-end d-flex price_money">
+                                    <h4>$<span id="iteamval1">0.00</span></h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    </div>
+                   
+                    <!--- Right div !-->
+                    <div class="col-md-12 col-lg-4 col-11 mx-auto mt-lg-0 mt-md-5">
+                        <div class="right_side p-3 shadow bg-white">
+                            <h2 class="product_name mb-5">The Total Amount of</h2>
+                            <div class="price_indiv d-flex justify-content-between">
+                                <p>Product amount</p>
+                                <p>$<span id="product_total">0.00</span></p>
+                            </div>
+                            <div class="price_indiv d-flex justify-content-between">
+                                <p>Shipping  Charge</p>
+                                <p>$<span id="shipping_charge">50.00</span></p>
+                            </div>
+                            <hr/>
+                            <div class="total_amt d-flex justify-content-between font-weight-bold">
+                                <p>The Total amount of</p>
+                                <p>$<span id="total_cart_amt">0.00</span></p>
+                            </div>
+                            <button class="btn btn-primary  text-uppercsae " onclick="check()">CHECKOUT</button>
+                        </div>
+                        <h5 class="mb-4">Expectd Delivery Date</h5>
+                        <div class="mt-3 shadow p-3 bg-white Delivery-section" id="Delivery-section" style="display: none;">
+                          
+                            <p>March 05 2023 -7March 2023</p>
+                        </div>
+                    </div>        
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+   
+
+    <script src="shoping.js">
+
+    
+
+
+
+    </script>
+
+</body>
+
+</html>
