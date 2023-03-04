@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Name:
+    <input type="text" id="name">
+    Passward:
+    <input type="password" id="pwd">
+    <button type="button" onclick="login()">login</button>
+   
+</body>
+<script>
+ function login(){
+    var name=document.getElementById("name").value;
+    var password=document.getElementById("pwd").value;
+    if(name=="bhupesh" && password=="Manuja"){
+        location.assign("index.html");
+    }
+    else{
+        alert("wrong password");
+    }
+ }
+   
+</script>
+
+</html>
