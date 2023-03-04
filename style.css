@@ -1,0 +1,41 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@1,300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Mulish', sans-serif;
+}
+:root{
+    --text-clr:#4f4f4f;
+}
+p{
+    color: #6c757d;
+}
+a{
+    text-decoration: none;
+    color: var(--text-clr);
+}
+.main_cart{
+    background-color: white;
+}
+.card{
+    border:1px none;
+}
+.product_img img{
+    min-width: 200px;
+    max-height: 200px;
+}
+.page-link{
+    color: black;
+    text-align: center;
+}
+.page-link:hover{
+   text-decoration: none;
+   color: grey;
+   outline: none !important;
+}
+.fa-heart:hover{
+    color: red;
+}
